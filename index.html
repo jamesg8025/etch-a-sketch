@@ -14,16 +14,21 @@
 </head>
 <body>
     <h1>Etch-a-Sketch</h1>
-    <div class="settings-container">
-        <div class="color-selector"></div>
-        <button>Selected Color</button>
-        <button>Rainbow</button>
-        <button>Eraser</button>
-        <button>Clear</button>
-        <div class="grid-dimensions">16x16</div>
-        <div class="choose-dimensions"></div>
+    <div class="content">
+        <div class="settings-container">
+            <div class="color-selector"></div>
+            <button>Select Color</button>
+            <button>Single Color</button>
+            <button>Rainbow</button>
+            <button>Eraser</button>
+            <button>Clear</button>
+            <div class="dimension-slider">
+                <div class="grid-dimensions">16x16</div>
+                <input type="range" min="256" max="10000" value="256" class="slider"> </input>
+            </div>
+        </div>
+        <div class="grid-container"></div>
     </div>
-    <div class="grid-container"></div>
     <footer> Created by James Gonzalez &copy; <a href="https://github.com/jamesg8025"> <i class="fa-brands fa-github fa-bounce" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; " ></i> </a></footer>
 </body>
 </html>
