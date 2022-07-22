@@ -16,15 +16,17 @@
     <h1>Etch-a-Sketch</h1>
     <div class="content">
         <div class="settings-container">
-            <div class="color-selector"></div>
-            <button>Select Color</button>
+            <div class="color-selector">
+                <input type="color" class="select-color"
+                value="black">
+            </div>
             <button>Single Color</button>
             <button>Rainbow</button>
             <button>Eraser</button>
             <button>Clear</button>
             <div class="dimension-slider">
                 <div class="grid-dimensions">16x16</div>
-                <input type="range" min="256" max="10000" value="256" class="slider"> </input>
+                <input type="range" min="256" max="10000" value="256" class="slider">
             </div>
         </div>
         <div class="grid-container"></div>
