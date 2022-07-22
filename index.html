@@ -18,15 +18,16 @@
         <div class="settings-container">
             <div class="color-selector">
                 <input type="color" class="select-color"
-                value="black">
+                value="#000000">
             </div>
             <button>Single Color</button>
             <button>Rainbow</button>
             <button>Eraser</button>
             <button>Clear</button>
-            <div class="dimension-slider">
+            <div class="dimension-selector">
                 <div class="grid-dimensions">16x16</div>
-                <input type="range" min="256" max="10000" value="256" class="slider">
+                <input type="text" placeholder="Enter Grid Dimensions" value="16" onchange="changeSize(this.value)">
+                <button>Set Dimension</button>
             </div>
         </div>
         <div class="grid-container"></div>

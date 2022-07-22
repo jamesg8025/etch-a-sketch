@@ -30,8 +30,8 @@ h1 {
 .grid-container {
     display: grid;
     grid-gap: 0;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    /* grid-template-rows: repeat(var(size), 1fr);
+    grid-template-columns: repeat(var(size), 1fr); */
     height: 500px;
     width: 500px;
 }
@@ -40,6 +40,10 @@ h1 {
     border: 1px solid black;
     /* text-align: center; */
 }
+
+/* .grid-item:hover {
+    background-color: black;
+} */
 
 footer {
     background-color: dimgrey;
