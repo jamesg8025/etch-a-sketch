@@ -10,8 +10,9 @@ function makeRows(size) {
     // create for loop to determine size of grid
     for (i = 0; i < (size * size); i++) {
         let cell = document.createElement('div');
-        // cell.innerText = (c + 1);
         container.appendChild(cell).className = 'grid-item';
+        // function to change cell color when mouseover each div
+        cell.addEventListener('mouseover', colorCell);
     };
 
 };
@@ -26,6 +27,9 @@ function changeSize(input) {
     
 }
 
-
+function colorCell() {
+    // 'this' refers to whatever cell gets hovered over
+    this.style.backgroundColor = 'black';
+};
 
 makeRows(16);
