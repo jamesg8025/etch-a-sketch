@@ -1,3 +1,6 @@
+// set global variable for black as default color
+let color = 'black';
+
 function makeRows(size) {
     const container = document.querySelector('.grid-container');
     // declare a variable representing all new cells
@@ -25,11 +28,15 @@ function changeSize(input) {
         console.log('Enter a valid integer!');
     }
     
-}
+};
 
 function colorCell() {
     // 'this' refers to whatever cell gets hovered over
-    this.style.backgroundColor = 'black';
+    this.style.backgroundColor = color;
+};
+
+function changeColor(choice) {
+    color = choice;
 };
 
 makeRows(16);
