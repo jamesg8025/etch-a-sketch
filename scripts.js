@@ -17,7 +17,6 @@ const blackBtn = document.getElementById('blackBtn');
 blackBtn.onclick = () => setCurrentMode('black');
 const gridDimension = document.getElementsByClassName('gridDimension');
 
-
 // assume click is not being pressed
 let click = false;
 // when clicked
@@ -25,11 +24,13 @@ document.body.onmousedown = () => (click = true);
 // when not being clicked
 document.body.onmouseup = () => (click = false);
 
+// loads default settings when page is loaded
 window.onload = () => {
     makeRows(16);
     activateButton(defaultMode);
-}
+};
 
+// sets up the grid
 function makeRows(size) {
     const container = document.querySelector('.grid-container');
     // declare a variable representing all new cells
@@ -49,20 +50,23 @@ function makeRows(size) {
     };
 };
 
+// takes user input to set up the grid size
 function changeSize(input) {
     // set parameters for dimension size entry
     if (input >= 1 && input <= 100) {
+        document.querySelector('.invalid-input').style.display = 'none';
         makeRows(input);
         displayDimension(input);
     } else {
-        console.log('Enter a valid integer!');
+        document.querySelector('.invalid-input').style.display = 'flex';
     }
     
 };
 
+// updates the grid dimensions being used
 function displayDimension(input) {
     document.querySelector('.gridDimension').textContent = `Displaying: ${input} x ${input}`;
-}
+};
 
 // this function sets the new mode when corresponding button is clicked and removes other active buttons
 function activateButton(newMode) {
@@ -86,7 +90,7 @@ function activateButton(newMode) {
         blackBtn.classList.add('active')
     }
 };
-  
+
 function setCurrentColor(newColor) {
     currentColor = newColor
 };
@@ -96,6 +100,7 @@ function setCurrentMode(newMode) {
     currentMode = newMode
 };
 
+// color's each cell when mouseover and clicked
 function colorCell(e) {
     if (e.type === 'mouseover' && !click) {
         return;
@@ -116,27 +121,8 @@ function colorCell(e) {
     }
 };
 
-// function colorCell() {
-//     // 'this' refers to whatever cell gets hovered over
-//     if ((color === 'rainbow')) {
-//         // random constant changing color
-//         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-//     } else {
-//         this.style.backgroundColor = color;
-//     }
-// };
-
-// function changeColor(choice) {
-//     let color = document.getElementById('colorSelector').value;
-//     color = choice;
-
-// };
-
-
 function resetGrid() {
     const container = document.querySelector('.grid-container');
     let cells = container.querySelectorAll('div');
     cells.forEach((div) => div.style.backgroundColor = 'white');
 };
-
-// makeRows(16);

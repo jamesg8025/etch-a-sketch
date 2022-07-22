@@ -53,3 +53,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.invalid-input {
+    text-align: center;
+}
