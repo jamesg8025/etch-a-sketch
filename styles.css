@@ -4,6 +4,12 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #d5fefd;
+    background-image: linear-gradient(315deg, #d5fefd 0%, #fffcff 74%);;
+}
+
+h1{
+    font-size: 50px;
 }
 
 .content {
@@ -20,6 +26,17 @@ body {
     gap: 20px;
 }
 
+#colorBtn,
+#rainbowBtn,
+#blackBtn,
+#eraserBtn,
+#resetBtn {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
 .gridDimension {
     text-align: center;
 }
@@ -30,15 +47,22 @@ h1 {
 .grid-container {
     display: grid;
     grid-gap: 0;
-    /* grid-template-rows: repeat(var(size), 1fr);
-    grid-template-columns: repeat(var(size), 1fr); */
     height: 500px;
     width: 500px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
 
 button.active {
-    background-color: var(--primary-dark);
-    color: var(--primary-light);
+    background-color: darkslategrey;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.dimensionSelector {
+    margin: 10px;
 }
 
 footer {
