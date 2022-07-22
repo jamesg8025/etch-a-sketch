@@ -16,16 +16,18 @@
     <h1>Etch-a-Sketch</h1>
     <div class="content">
         <div class="settings-container">
-            <div class="color-selector">
-                <input type="color" class="select-color"
+            <div class="color-selector-div">
+                <label for="colorSelector">Select a Color</label>
+                <input type="color" id="colorSelector"
                 value="#000000">
             </div>
-            <button>Single Color</button>
-            <button>Rainbow</button>
-            <button onclick="changeColor('white')">Eraser</button>
-            <button>Clear</button>
+            <button id="colorBtn">Use Selected Color</button>
+            <button id="blackBtn">Black</button>
+            <button id="rainbowBtn">Rainbow</button>
+            <button id="eraserBtn">Eraser</button>
+            <button onclick="resetGrid()">Reset</button>
             <div class="dimension-selector">
-                <div class="grid-dimensions">16x16</div>
+                <div class="gridDimension">Displaying 16 x 16</div>
                 <input type="text" placeholder="Enter Grid Dimensions" 
                 value="16" onchange="changeSize(this.value)">
                 <button>Set Dimension</button>

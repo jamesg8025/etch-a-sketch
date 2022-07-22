@@ -20,7 +20,7 @@ body {
     gap: 20px;
 }
 
-.grid-dimensions {
+.gridDimension {
     text-align: center;
 }
 
@@ -36,14 +36,10 @@ h1 {
     width: 500px;
 }
 
-.grid-item {
-    border: 1px solid black;
-    /* text-align: center; */
+button.active {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
 }
-
-/* .grid-item:hover {
-    background-color: black;
-} */
 
 footer {
     background-color: dimgrey;
