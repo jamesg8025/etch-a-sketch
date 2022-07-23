@@ -1,2 +1,2 @@
 # etch-a-sketch
-This project is a browser version of something between a sketchpad and and Etch-A-Sketch. This project will demonstrate some DOM manipulation skills along with experimenting to find the right JavaScript methods and CSS to use.
+This project is a browser version of something between a sketchpad and and Etch-A-Sketch. This project will demonstrate some DOM manipulation skills along with experimenting to find the right JavaScript methods and CSS to use. This game also includes the use of CSS Grid for the first time.
